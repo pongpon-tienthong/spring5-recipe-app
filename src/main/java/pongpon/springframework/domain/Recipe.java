@@ -14,13 +14,13 @@ public class Recipe {
     private String description;
     private Integer prepTime;
     private Integer cookTime;
-    private Integer serviings;
+    private Integer servings;
     private String source;
     private String url;
     private String directions;
 
-//    TODO: add Difficulty
-//    private Difficulty difficulty;
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
 
     @Lob
     private Byte[] image;
@@ -63,12 +63,12 @@ public class Recipe {
         this.cookTime = cookTime;
     }
 
-    public Integer getServiings() {
-        return serviings;
+    public Integer getServings() {
+        return servings;
     }
 
-    public void setServiings(Integer serviings) {
-        this.serviings = serviings;
+    public void setServings(Integer servings) {
+        this.servings = servings;
     }
 
     public String getSource() {
@@ -117,5 +117,13 @@ public class Recipe {
 
     public void setIngredients(Set<Ingredient> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
     }
 }
