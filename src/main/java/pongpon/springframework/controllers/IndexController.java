@@ -16,8 +16,6 @@ public class IndexController {
 
     private final RecipeService recipeService;
 
-
-
     @Autowired
     public IndexController(RecipeService recipeService) {
         this.recipeService = recipeService;
